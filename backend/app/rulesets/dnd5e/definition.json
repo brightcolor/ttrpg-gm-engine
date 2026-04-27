@@ -1,0 +1,43 @@
+{
+  "slug": "dnd5e",
+  "name": "Dungeons & Dragons compatible d20 profile",
+  "version": "0.1.0",
+  "description": "System profile for d20 fantasy play without bundled copyrighted adventure or bestiary content.",
+  "character_schema": {
+    "required": ["level", "attributes", "hp", "ac"],
+    "fields": {
+      "class": {"type": "string", "label": "Class"},
+      "level": {"type": "integer", "label": "Level"},
+      "attributes": {"type": "object", "label": "Attributes"},
+      "skills": {"type": "object", "label": "Skills"},
+      "hp": {"type": "object", "label": "Hit Points"},
+      "ac": {"type": "integer", "label": "Armor Class"},
+      "spell_slots": {"type": "object", "label": "Spell Slots"}
+    }
+  },
+  "attributes": ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"],
+  "skills": ["acrobatics", "animal_handling", "arcana", "athletics", "deception", "history", "insight", "intimidation", "investigation", "medicine", "nature", "perception", "performance", "persuasion", "religion", "sleight_of_hand", "stealth", "survival"],
+  "dice_mechanics": {
+    "ability_check": "1d20 + ability_modifier + proficiency_if_applicable + situational_modifiers",
+    "saving_throw": "1d20 + ability_modifier + proficiency_if_applicable",
+    "attack": "1d20 + attack_modifier vs armor_class",
+    "damage": "weapon_or_spell_damage_expression"
+  },
+  "checks": {
+    "ability": {"formula": "1d20", "supports_advantage": true},
+    "skill": {"formula": "1d20", "supports_advantage": true},
+    "saving_throw": {"formula": "1d20", "supports_advantage": true}
+  },
+  "combat_rules": {
+    "initiative": "1d20 + dexterity_modifier",
+    "turn_terms": ["action", "bonus_action", "movement", "reaction"],
+    "death_saves": true,
+    "rests": ["short_rest", "long_rest"]
+  },
+  "ui_labels": {
+    "hp": "Hit Points",
+    "ac": "Armor Class",
+    "skills": "Skills",
+    "resources": "Resources"
+  }
+}

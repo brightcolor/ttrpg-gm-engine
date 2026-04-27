@@ -1,0 +1,11 @@
+{
+  "title": "Lichter in der alten Muehle",
+  "description": "Nachts flackert Licht in der verlassenen Muehle.",
+  "stakes": "Ein Ritual rueckt naeher, wenn die Gruppe zu lange wartet.",
+  "visibility": "party",
+  "data": {
+    "time_limit_days": 3,
+    "clues": ["Wachsspuren am Muehlentor", "Alrik sah vermummte Gestalten"]
+  }
+}
+

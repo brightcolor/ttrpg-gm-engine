@@ -1,0 +1,41 @@
+{
+  "slug": "dsa5",
+  "name": "Das Schwarze Auge compatible 3W20 profile",
+  "version": "0.1.0",
+  "description": "Modular DSA-style profile skeleton. It contains mechanics shape only, not protected official content lists.",
+  "character_schema": {
+    "required": ["attributes", "resources"],
+    "fields": {
+      "species": {"type": "string", "label": "Spezies"},
+      "culture": {"type": "string", "label": "Kultur"},
+      "profession": {"type": "string", "label": "Profession"},
+      "attributes": {"type": "object", "label": "Eigenschaften"},
+      "talents": {"type": "object", "label": "Talente"},
+      "resources": {"type": "object", "label": "Ressourcen"},
+      "advantages": {"type": "array", "label": "Vorteile"},
+      "disadvantages": {"type": "array", "label": "Nachteile"}
+    }
+  },
+  "attributes": ["courage", "sagacity", "intuition", "charisma", "dexterity", "agility", "constitution", "strength"],
+  "dice_mechanics": {
+    "talent_check": "3d20 against three attributes; talent value offsets points over attributes; remaining points determine quality level",
+    "attack": "attack value check, followed by possible defense/parry",
+    "damage": "weapon damage minus protection where applicable"
+  },
+  "checks": {
+    "talent": {"formula": "3d20", "quality_step": 3},
+    "spell": {"formula": "3d20", "quality_step": 3},
+    "litury": {"formula": "3d20", "quality_step": 3}
+  },
+  "combat_rules": {
+    "initiative": "ruleset defined initiative value plus roll/modifiers",
+    "defense_terms": ["attack", "parry", "dodge"],
+    "resources": ["life_energy", "astral_energy", "karma_energy", "fate_points"]
+  },
+  "ui_labels": {
+    "hp": "Lebensenergie",
+    "skills": "Talente",
+    "resources": "Ressourcen",
+    "armor": "Ruestungsschutz"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Alrik",
+  "role": "Dorfschmied",
+  "public_data": {
+    "personality": "misstrauisch, direkt, pflichtbewusst",
+    "known_to_players": "Hat nachts Licht an der alten Muehle gesehen."
+  },
+  "gm_data": {
+    "gm_secret": "Schmiedet heimlich Waffen fuer eine lokale Rebellengruppe.",
+    "fear": "Dass der Baron seine Familie als Druckmittel benutzt."
+  },
+  "disposition": {
+    "party": "vorsichtig freundlich"
+  }
+}
+

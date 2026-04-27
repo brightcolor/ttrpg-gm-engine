@@ -1,0 +1,24 @@
+{
+  "slug": "custom-2d10",
+  "name": "Homebrew 2d10",
+  "version": "1.0.0",
+  "description": "Checks use 2d10 + attribute + skill against a difficulty.",
+  "character_schema": {
+    "required": ["attributes", "skills"],
+    "fields": {
+      "attributes": {"type": "object", "label": "Attribute"},
+      "skills": {"type": "object", "label": "Fertigkeiten"},
+      "resources": {"type": "object", "label": "Ressourcen"}
+    }
+  },
+  "checks": {
+    "default": {"formula": "2d10"}
+  },
+  "dice_mechanics": {
+    "default_check": "2d10 + attribute + skill vs difficulty"
+  },
+  "ui_labels": {
+    "hp": "Vitalitaet"
+  }
+}
+

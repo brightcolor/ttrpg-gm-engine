@@ -1,0 +1,13 @@
+name: Greifenfurt
+type: village
+public_data:
+  mood: regennass, angespannt, aberglaeubisch
+  known_places:
+    - Marktplatz
+    - Schmiede
+    - Alte Muehle
+gm_data:
+  secrets:
+    - Unter der alten Muehle trifft sich ein Kult.
+    - Der Baron bezahlt Spitzel im Dorf.
+

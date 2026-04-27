@@ -1,0 +1,26 @@
+{
+  "slug": "custom",
+  "name": "Custom ruleset",
+  "version": "0.1.0",
+  "description": "First-class editable homebrew profile.",
+  "character_schema": {
+    "required": ["attributes"],
+    "fields": {
+      "attributes": {"type": "object", "label": "Attributes"},
+      "skills": {"type": "object", "label": "Skills"},
+      "resources": {"type": "object", "label": "Resources"}
+    }
+  },
+  "attributes": [],
+  "skills": [],
+  "dice_mechanics": {
+    "default_check": "1d20"
+  },
+  "checks": {
+    "default": {"formula": "1d20"}
+  },
+  "combat_rules": {},
+  "magic_rules": {},
+  "advancement_rules": {},
+  "ui_labels": {}
+}

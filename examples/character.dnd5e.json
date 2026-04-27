@@ -1,0 +1,23 @@
+{
+  "name": "Elira",
+  "summary": "Wendige Abenteurerin mit zweifelhaftem Ruf.",
+  "ruleset": "dnd5e",
+  "ruleset_data": {
+    "class": "Rogue",
+    "level": 1,
+    "attributes": {
+      "strength": 8,
+      "dexterity": 16,
+      "constitution": 12,
+      "intelligence": 13,
+      "wisdom": 10,
+      "charisma": 14
+    },
+    "proficiencies": {
+      "skills": ["stealth", "persuasion"]
+    },
+    "hp": {"current": 9, "max": 9},
+    "ac": 14
+  }
+}
+
