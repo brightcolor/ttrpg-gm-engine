@@ -50,8 +50,13 @@ Key principle: rules are data-driven. D&D and DSA are example profiles; homebrew
 
 ## Quick Start
 
-```powershell
-Copy-Item .env.example .env
+Prerequisites on Linux:
+
+- Docker Engine
+- Docker Compose v2 (`docker compose`)
+
+```bash
+cp .env.example .env
 docker compose up --build
 ```
 
@@ -63,8 +68,8 @@ Open:
 
 Load the demo campaign from the UI or call:
 
-```powershell
-Invoke-RestMethod -Method Post http://localhost:8000/api/seed
+```bash
+curl -X POST http://localhost:8000/api/seed
 ```
 
 ## LLM Setup
@@ -107,12 +112,12 @@ API keys stay on the backend.
 
 ## Backend Development
 
-```powershell
+```bash
 cd backend
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+source .venv/bin/activate
 pip install -e ".[dev]"
-$env:DATABASE_URL="sqlite:///./dev.db"
+export DATABASE_URL="sqlite:///./dev.db"
 alembic upgrade head
 python scripts_seed.py
 uvicorn app.main:app --reload
@@ -120,14 +125,14 @@ uvicorn app.main:app --reload
 
 Run tests:
 
-```powershell
+```bash
 cd backend
 pytest
 ```
 
 ## Frontend Development
 
-```powershell
+```bash
 cd frontend
 npm install
 npm run dev
@@ -206,14 +211,14 @@ Examples are in `examples/`:
 
 Backup:
 
-```powershell
+```bash
 docker compose exec db pg_dump -U gm gm > backup.sql
 ```
 
 Restore into a fresh database:
 
-```powershell
-Get-Content backup.sql | docker compose exec -T db psql -U gm gm
+```bash
+cat backup.sql | docker compose exec -T db psql -U gm gm
 ```
 
 For campaign-level exports, use the JSON API surfaces as they are expanded. The schema is designed so campaign-owned rows can be exported by `campaign_id`.
