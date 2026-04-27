@@ -300,6 +300,8 @@ This project does not bundle official adventures, monster books, proprietary set
 - NPC voice/style modules.
 - Optional maps, scenes and TTS.
 
+- testcommmit
+
 ## Troubleshooting
 
 - Backend cannot connect to DB: wait for `db` healthcheck, then rerun `docker compose up`.
