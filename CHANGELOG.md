@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1 - 2026-10-09
+
+- Frontend dependencies: Next.js 16.3.8 with eslint-config-next 16.3.8 (security fix, 16.3.6 from Dependabot was still affected), sharp 0.35.5, postcss 8.5.23, source-map-js 1.2.2, nanoid 3.3.20 and further updates of the npm group. `npm run build` passes. The advisory for `braces` has no fixed release yet.
+
 ## 0.1.0 - 2026-04-27
 
 - Initial self-hostable MVP stack with FastAPI, PostgreSQL/pgvector image, Redis and Next.js.
